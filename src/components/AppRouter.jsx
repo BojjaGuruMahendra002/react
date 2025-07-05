@@ -6,7 +6,9 @@ import About from '../pages/About'
 import { RegisterPage } from './RegisterPage'
 import { LoginPage } from './Login'
 import Cart from '../pages/Cart'
-import { ProductsFetch } from '../Features/ProductsFetch'
+
+import DeatailProduct from '../pages/DeatailProduct'
+import { Products } from '../pages/Products'
 
 export default function AppRouter() {
   return (
@@ -14,7 +16,8 @@ export default function AppRouter() {
 <Routes>
 	<Route path='/'element={<Home/>}/>
 	<Route path='/about' element={<About/>}/>
-	<Route path='/product' element = {<ProductsFetch/>}/>
+	<Route path='/product' element = {<Products/>}/>
+	<Route path='/productdetails/:id' element={<DeatailProduct/>}/>
 	<Route path='/cart' element={<Cart/>}/>
 	<Route path='/register' element = {<RegisterPage/>}/>
 	<Route path='/login' element = {<LoginPage />}/>

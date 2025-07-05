@@ -21,7 +21,7 @@ const Carousel = () => {
       <img
         src={images[currentIndex]}
         alt="carousel"
-        className="w-full h-full object-cover transition-all duration-700"
+        className=" object-cover transition-all duration-700" style={{width:'1600px',height:'400px'}}
       />
     </div>
   );
