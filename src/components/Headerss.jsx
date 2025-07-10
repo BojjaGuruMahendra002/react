@@ -14,7 +14,7 @@ export default function Headerss() {
           <Link to="/about" className="hover:text-gray-300">About</Link>
           <Link to="/product" className="hover:text-gray-300">Products</Link>
           <Link to="/contact" className="hover:text-gray-300">Contact</Link>
-          <Link to='/cart' className='hover:text-gray-300'>Cart</Link>
+          <Link to='/cart' className='hover:text-gray-300'>Cart </Link>
           <Link to="/register" className="hover:text-gray-300">Register</Link>
            <Link to="/login" className="hover:text-gray-300">Login</Link>
 

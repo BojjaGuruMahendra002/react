@@ -1,8 +1,11 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import CartContext from "./CardContext";
+``
 
 export const Products = () => {
+  const { addToCart } = useContext(CartContext);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState('');
   const [visibleCount, setVisibleCount] = useState(10);
@@ -78,7 +81,7 @@ export const Products = () => {
                 <p className="m-2"><b>Description:</b> {product.description.slice(0, 50)}...</p>
                 <p className="m-2"><b>Price:</b> ${product.price}</p>
               </div>
-              <button className="border-1 px-4 py-2 bg-blue-500 rounded-2xl text-white">Add To Cart</button>
+              <button className="border-1 px-4 py-2 bg-blue-500 rounded-2xl text-white" onClick={()=> addToCart(product)}>Add To Cart</button>
               <Link to={`/productdetails/${product.id}`}>
                 <button className="border-1 mx-3 px-4 py-2 bg-blue-500 rounded-2xl text-white">Details</button>
               </Link>

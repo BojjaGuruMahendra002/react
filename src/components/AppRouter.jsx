@@ -9,10 +9,12 @@ import Cart from '../pages/Cart'
 
 import DeatailProduct from '../pages/DeatailProduct'
 import { Products } from '../pages/Products'
+import CartProvider from '../pages/CartProvider'
 
 export default function AppRouter() {
   return (
 <>
+<CartProvider>
 <Routes>
 	<Route path='/'element={<Home/>}/>
 	<Route path='/about' element={<About/>}/>
@@ -22,6 +24,7 @@ export default function AppRouter() {
 	<Route path='/register' element = {<RegisterPage/>}/>
 	<Route path='/login' element = {<LoginPage />}/>
 </Routes>
+</CartProvider>
 </>
   )
 }

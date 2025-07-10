@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+
 export default function DetailProduct() {
 	const { id } = useParams();
 	const [data, setData] = useState({});
@@ -32,7 +33,7 @@ export default function DetailProduct() {
 				<div className="flex flex-col justify-between w-75">
 					<p className="text-lg">{data.description}</p>
 					<p className="text-xl font-semibold text-green-600 mt-2">${data.price}</p>
-					<button className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded mt-2 w-max">
+					<button className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded mt-2 w-max" onClick={()=> alert('Added to cart!')}>
 						Add to Cart
 					</button>
 				</div>
