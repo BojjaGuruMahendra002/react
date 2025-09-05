@@ -7,12 +7,17 @@ export default function Cart() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold mb-4">Shopping Cart</h1>
+      <h1 className="text-3xl font-bold mb-4 text-center">Shopping Cart</h1>
       <div className="flex flex-col">
-        <img src="" alt="" />
+     
         {cartItems.length === 0 ? (
-          <p>Your cart is empty.</p>
-         
+          
+         <img src="/src/assets/react.svg" alt="logo" style={{
+          width:'200px',
+          height:'350px',
+          objectFit:'contain',
+          alignSelf:'center'
+         }} />
         ) : (
           cartItems.map((item) => (
             <div key={item.id} className="flex justify-between items-center border-b py-2">

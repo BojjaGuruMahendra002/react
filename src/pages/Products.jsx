@@ -2,7 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CartContext from "./CardContext";
-``
+
 
 export const Products = () => {
   const { addToCart } = useContext(CartContext);
@@ -12,7 +12,7 @@ export const Products = () => {
 
   const fetching = async () => {
     try {
-      const response = await axios.get('https://dummyjson.com/products?limit=200');
+      const response = await axios.get('https://dummyjson.com/products?limit=5000');
       setData(response.data.products);
     } catch (error) {
       console.error("Error fetching products:", error);
